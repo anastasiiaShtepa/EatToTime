@@ -1,6 +1,5 @@
 import React from "react";
 import { SvgXml } from "react-native-svg";
-
 import {
   RestaurantCard,
   RestaurantCardCover,
@@ -38,8 +37,8 @@ export const RestaurantInfoCard = ({ restaurant = {} }) => {
         <Text variant="label">{name}</Text>
         <Section>
           <Rating>
-            {ratingArray.map((id) => (
-              <SvgXml xml={star} width={20} height={20} key={id} />
+            {ratingArray.map((id, index) => (
+              <SvgXml xml={star} width={20} height={20} key={`star-${index}`} />
             ))}
           </Rating>
           <SectionEnd>
