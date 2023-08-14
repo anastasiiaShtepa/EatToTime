@@ -7,7 +7,6 @@ const Map = styled(MapView)`
   height: 100%;
   width: 100%;
 `;
-
 export const MapScreen = () => (
   <>
     <Search />
