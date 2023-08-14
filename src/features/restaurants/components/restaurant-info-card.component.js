@@ -14,6 +14,8 @@ import open from "../../../../assets/open";
 import star from "../../../../assets/star";
 import { Text } from "../../../components/typography/text.component";
 import { Spacer } from "../../../components/spacer/spacer.component";
+import { View } from "react-native";
+import { Favourite } from "../../../components/favourites/favourite.component";
 
 export const RestaurantInfoCard = ({ restaurant = {} }) => {
   const {
@@ -33,7 +35,10 @@ export const RestaurantInfoCard = ({ restaurant = {} }) => {
 
   return (
     <RestaurantCard elevation={5}>
-      <RestaurantCardCover key={name} source={{ uri: photos[0] }} />
+      <View>
+        <Favourite />
+        <RestaurantCardCover key={name} source={{ uri: photos[0] }} />
+      </View>
       <Info>
         <Text variant="label">{name}</Text>
         <Section>
