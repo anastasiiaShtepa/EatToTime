@@ -10,6 +10,7 @@ import { AuthenticationContext } from "../../services/authentication/authenticat
 import { RestaurantsContextProvider } from "../../services/restaurants/mock/restaurants.context";
 import { LocationContextProvider } from "../../services/location/location.context";
 import { FavouritesContextProvider } from "../../services/favourites/favourites.context";
+import { SettingsNavigator } from "./settings.navigator";
 
 const Tab = createBottomTabNavigator();
 
@@ -17,16 +18,6 @@ const TAB_ICON = {
   Bars: "md-restaurant",
   Map: "md-map",
   Settings: "md-settings",
-};
-
-const Settings = () => {
-  const { onLogout } = useContext(AuthenticationContext);
-  return (
-    <SafeArea>
-      <Text>Settings</Text>
-      <Button title="logout" onPress={() => onLogout()} />
-    </SafeArea>
-  );
 };
 
 const createScreenOptions = ({ route }) => {
@@ -50,7 +41,7 @@ export const AppNavigator = () => (
         <Tab.Navigator screenOptions={createScreenOptions}>
           <Tab.Screen name="Bars" component={RestaurantsNavigator} />
           <Tab.Screen name="Map" component={MapScreen} />
-          <Tab.Screen name="Settings" component={Settings} />
+          <Tab.Screen name="Settings" component={SettingsNavigator} />
         </Tab.Navigator>
       </RestaurantsContextProvider>
     </LocationContextProvider>
