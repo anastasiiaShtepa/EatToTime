@@ -11,7 +11,9 @@
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
-    "assetBundlePatterns": ["**/*"],
+    "assetBundlePatterns": [
+      "**/*"
+    ],
     "ios": {
       "supportsTablet": true
     },
@@ -25,7 +27,16 @@
       "fallbackToCacheTimeout": 0,
       "checkAutomatically": "ON_LOAD",
       "enabled": true,
-      "useClassicUpdates": false
+      "useClassicUpdates": false,
+      "url": "https://u.expo.dev/f91213d4-ead1-4002-8ea3-91c527d764e5"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "f91213d4-ead1-4002-8ea3-91c527d764e5"
+      }
+    },
+    "runtimeVersion": {
+      "policy": "appVersion"
     }
   }
 }
